@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ZamekApp</class>
+ <widget class="QMainWindow" name="ZamekApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ZamekApp</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="serialRefreshButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>34</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Refresh list of currently available Serial Ports&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="serialComboBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>35</y>
+      <width>100</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Try unplugging your Zamek and clicking Refresh, checking the ports that are still in the dropdown list while it is unplugged, then plug the Zamek back in and click Refresh, and select the new Serial Port listing that appears&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="serialLabel">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>38</y>
+      <width>75</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zamek Port:</string>
+    </property>
+    <property name="buddy">
+     <cstring>serialComboBox</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="serialStatusLabel">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>38</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Connection</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="debugTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>340</y>
+      <width>391</width>
+      <height>350</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="userLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>266</y>
+      <width>115</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="siteLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>226</y>
+      <width>115</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>306</y>
+      <width>115</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="entryNumberSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>106</x>
+      <y>227</y>
+      <width>43</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>64</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="restoreButton">
+    <property name="geometry">
+     <rect>
+      <x>239</x>
+      <y>110</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Restores the encrypted contents of your Zamek Memory Chip from a file on your computer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Restore</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backupButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stores the encrypted contents of your Zamek Memory Chip to a file on your computer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Backup</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Entry</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="entryNumberLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Entry Number:</string>
+    </property>
+    <property name="buddy">
+     <cstring>entryNumberSpinBox</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="portExplainLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>5</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Please select the Serial Port your Zamek is connected to:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="backupExplainLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Backup and Restore your Zamek's Memory Chip to your computer:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="editExplainLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>155</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Unlock your Zamek on the device using your PIN to Edit Entries:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="siteLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>230</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Site:</string>
+    </property>
+    <property name="buddy">
+     <cstring>siteLineEdit</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="userLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>User:</string>
+    </property>
+    <property name="buddy">
+     <cstring>userLineEdit</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="passLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>310</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pass:</string>
+    </property>
+    <property name="buddy">
+     <cstring>passLineEdit</cstring>
+    </property>
+   </widget>
+   <widget class="Line" name="portBackupLine">
+    <property name="geometry">
+     <rect>
+      <x>-3</x>
+      <y>61</y>
+      <width>411</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="backupEditLine">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>138</y>
+      <width>411</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lockStatusLabel">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>187</y>
+      <width>120</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Zamek is Locked</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lockRefreshButton</cstring>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lockRefreshButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>185</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loadButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Entry</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>serialComboBox</tabstop>
+  <tabstop>serialRefreshButton</tabstop>
+  <tabstop>backupButton</tabstop>
+  <tabstop>restoreButton</tabstop>
+  <tabstop>lockRefreshButton</tabstop>
+  <tabstop>entryNumberSpinBox</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>siteLineEdit</tabstop>
+  <tabstop>userLineEdit</tabstop>
+  <tabstop>passLineEdit</tabstop>
+  <tabstop>debugTextBrowser</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>serialComboRefresh()</slot>
+  <slot>serialComboSelected()</slot>
+  <slot>backupZamek()</slot>
+  <slot>restoreZamek()</slot>
+  <slot>loadEntry()</slot>
+  <slot>saveEntry()</slot>
+ </slots>
+</ui>
