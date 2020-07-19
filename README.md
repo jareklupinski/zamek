@@ -4,10 +4,10 @@ Your Digital Keychain.
 I want to design the digital equivalent to the analog keychain. It keeps your passwords for you in an easy-to-use and portable, reliable design. It can be used completely standalone, but also with a Desktop App for easier data input.
 
 Front View:
-![front-view](brd+sch/ZZamekUSBC1.jpeg)
+![front-view](brd+sch/ZamekUSBC1.jpeg)
 
 Back View:
-![back-view](brd+sch/ZZamekUSBC2.jpeg)
+![back-view](brd+sch/ZamekUSBC2.jpeg)
 
 ![schematic](brd+sch/ZamekUSBC.png)
 
