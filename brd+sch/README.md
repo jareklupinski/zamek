@@ -1,7 +1,13 @@
 Actual Schematic:
-![schematic](zamek-schematic.png)
+![schematic](ZamekUSBC.png)
 
 Component Layout:
-![board](zamek-board.png)
+![board](ZamekUSBCbrd.png)
 
-Be careful, the board isn't routed in this repo. This means, you can't just sent this to PCB service...
+Routed, produced, and smoke tested. Some validation with sensors to be done...
+
+Front View:
+![front-view](ZamekUSBC1.jpeg)
+
+Back View:
+![back-view](ZamekUSBC2.jpeg)
