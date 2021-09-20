@@ -3,6 +3,12 @@ Your Digital Keychain.
 
 I want to design the digital equivalent to the analog keychain. It keeps your passwords for you in an easy-to-use and portable, reliable design. It can be used completely standalone, but also with a Desktop App for easier data input.
 
+Prototypes:
+
+![7952431461203507149](https://user-images.githubusercontent.com/2049284/134082990-38610bf4-bf95-4181-bdcb-483834c8b285.jpeg)
+
+![5265461491836069090](https://user-images.githubusercontent.com/2049284/134082992-3e3a0a78-ae6d-43f3-bd3a-811b046ff041.jpg)
+
 Front View:
 ![front-view](brd+sch/ZamekUSBC1.jpeg)
 
