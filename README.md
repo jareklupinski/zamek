@@ -5,9 +5,11 @@ I want to design the digital equivalent to the analog keychain. It keeps your pa
 
 Prototypes:
 
-![7952431461203507149](https://user-images.githubusercontent.com/2049284/134082990-38610bf4-bf95-4181-bdcb-483834c8b285.jpeg)
+[Youtube Function Demo](https://www.youtube.com/watch?v=8wrW3907pkc)
 
-![5265461491836069090](https://user-images.githubusercontent.com/2049284/134082992-3e3a0a78-ae6d-43f3-bd3a-811b046ff041.jpg)
+![Zamek Prototype 1](https://user-images.githubusercontent.com/2049284/134082990-38610bf4-bf95-4181-bdcb-483834c8b285.jpeg)
+
+![Zamek Prototype 2](https://user-images.githubusercontent.com/2049284/134082992-3e3a0a78-ae6d-43f3-bd3a-811b046ff041.jpg)
 
 Front View:
 ![front-view](brd+sch/ZamekUSBC1.jpeg)
